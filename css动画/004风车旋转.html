@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>风车旋转</title>
+	<style type="text/css" media="screen">
+		@keyframes rotating {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		img {
+			display: block;
+			width: 400px;
+			height: 400px;
+			margin: 50px auto 0;
+			animation: rotating 5s linear infinite alternate;
+			animation-play-state: running;
+		}
+
+		img:hover {
+			animation-play-state: paused;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="images/fengche.png" alt="风车图片">
+</body>
+
+</html>

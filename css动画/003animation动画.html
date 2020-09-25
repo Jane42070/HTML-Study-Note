@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>animation 动画</title>
+	<style type="text/css" media="screen">
+		/* 定义动画 */
+		@keyframes moving {
+			from {
+				width: 100px;
+			}
+
+			to {
+				width: 500px;
+			}
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 50px auto 0;
+			border: 3px solid #000;
+			border-radius: 5px;
+			background-color: gold;
+			/* 定义的动画名 动画时间 动作程度 次数（一个来回算两次） 动画是否反向还原*/
+			animation: moving 1s ease infinite alternate;
+			animation-play-state: paused;
+		}
+
+		.box:hover {
+			animation-play-state: running;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+
+</html>

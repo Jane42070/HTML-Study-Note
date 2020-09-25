@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>图片翻转动画</title>
+	<style type="text/css" media="screen">
+		.box {
+			width: 1000px;
+			height: 400px;
+			margin: 50px auto 0;
+			position: relative;
+			border: 3px solid #000;
+			border-radius: 5px;
+			/* 让容器里面的元素按照 3d 空间显示（规范写法） */
+			transform-style: preserve-3d;
+		}
+
+		.box img {
+			position: absolute;
+			left: 370px;
+			top: 0;
+			border: 2px solid #000;
+			border-radius: 5px;
+			margin: 5px;
+			transform: perspective(2000px) rotateY(0deg);
+			transition: all 800ms ease;
+			backface-visibility: hidden;
+		}
+
+		.box:hover img {
+			transform: perspective(2000px) rotateY(180deg);
+		}
+
+		.box .back {
+			width: 300px;
+			height: 272px;
+			background-color: gold;
+			border: 3px solid #000;
+			border-radius: 5px;
+			margin: 10px;
+			position: absolute;
+			left: 370px;
+			top: 0;
+			text-align: center;
+			line-height: 272px;
+			font-size: 20px;
+			transform: perspective(2000px) rotateY(180deg);
+			transition: all 800ms ease;
+			backface-visibility: hidden;
+		}
+
+		.box:hover .back {
+			transform: perspective(2000px) rotateY(0deg);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<img src="../1s_by_wlop-d8wr56r.jpg" alt="骑士" width="35%" height="55%">
+		<div class="back">卢銮婷的文字说明</div>
+	</div>
+</body>
+
+</html>

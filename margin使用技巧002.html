@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>margin 的赋值</title>
+	<style type="text/css">
+		body {
+			/* body 本身带有 8px 的 margin */
+			margin: 0;
+		}
+
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			margin-left: -10px;
+		}
+
+		.box1 {
+			width: 200px;
+			height: 156px;
+			background-color: gold;
+			margin-left: 200px;
+			margin-top: -180px;
+		}
+
+		.box1 div {
+			width: 200px;
+			height: 30px;
+			border: 1px solid green;
+			background-color: gold;
+			margin-top: -1px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">While a good dog looking at a lazy dog</div>
+	<div class="box1">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div class="last"></div>
+	</div>
+</body>
+
+</html>

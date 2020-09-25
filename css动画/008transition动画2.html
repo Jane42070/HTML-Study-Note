@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>transition 动画练习</title>
+	<style type="text/css" media="screen">
+		.box {
+			width: 600px;
+			height: 430px;
+			margin: 50px auto 0;
+			background: url(images/pic2x.jpg);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.box .text {
+			height: 100px;
+			width: 580px;
+			background-color: rgba(0, 0, 0, 0.3);
+			color: #fff;
+			position: absolute;
+			padding: 10px;
+			bottom: -110px;
+			transition: all 500ms ease;
+		}
+
+		.box:hover .text {
+			bottom: 0px;
+		}
+
+		h2 {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="text">
+			<h2>文字标题</h2>
+			<p>图片文字说明，图片文字说明图片文字说明图片文字说明，图片文字说明图片文字说明图片文字说明，图片文字说明图片文字说明</p>
+		</div>
+	</div>
+</body>
+
+</html>

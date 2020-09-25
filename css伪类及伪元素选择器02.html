@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>伪类及伪元素选择器</title>
+	<style type="text/css">
+		/* 伪类选择器 */
+		.link {
+			font-size: 30px;
+			text-decoration: none;
+			color: red;
+			font-family: 'OPPOSans';
+		}
+
+		/* 状态 */
+		.link:hover {
+			color: black;
+			font-weight: bold;
+		}
+
+		.box01,
+		.box02 {
+			font-size: 20px;
+			font-family: 'OPPOSans';
+		}
+
+		.box01::before {
+			/* content 内容无法选中 */
+			content: "·";
+			color: gray;
+		}
+
+		.box02::after {
+			content: "。";
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="https://www.baidu.com" class="link">百毒搜索引擎</a>
+	<div class="box01">这是第一个 div</div>
+	<div class="box02">这是第二个 div</div>
+</body>
+
+</html>

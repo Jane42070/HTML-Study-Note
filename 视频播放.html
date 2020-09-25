@@ -1,0 +1,118 @@
+<html>
+
+<head>
+	<title>视频流媒体传输</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script charset="utf-8">
+		$(function () {
+			$('.box').fadeIn(800).find('.ved').fadeIn(800).css({
+				'display': 'block'
+			})
+
+			$('.ved').click(function () {
+				$('.shadow').stop().fadeIn(500)
+				$('.ved').stop().animate({
+					'width': '105%', 'height': '105%',
+					'top': '-17%', 'left': '-3%',
+				}, 500)
+			})
+			$('.shadow').click(function () {
+				$('.shadow').stop().fadeOut(500)
+				$('.ved').stop().animate({
+					'width': '80%', 'height': '80%',
+					'top': '0', 'left': '0',
+				}, 500)
+			})
+		})
+	</script>
+	<style type="text/css" media="screen">
+		::-webkit-scrollbar {
+			width: 6px;
+		}
+
+		::-webkit-scrollbar-track {
+			box-shadow: inset 6px rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background: rgba(0, 0, 0, 0.1);
+			box-shadow: inset 6px rgba(0, 0, 0, 0.5);
+			transition: all 200ms ease;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(237, 130, 34, 0.5)
+		}
+
+		::-webkit-scrollbar-thumb:window-inactive {
+			background: rgba(255, 0, 0, 0.4);
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #ebeef2;
+		}
+
+		.box {
+			height: 650px;
+			width: 1100px;
+			background-color: #fff;
+			margin: 50px auto 0;
+			border-radius: 5px;
+			box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+			position: relative;
+			display: none;
+		}
+
+		.header {
+			border-bottom: 1px solid #dfe1e5;
+			margin-bottom: 25px;
+			height: 60px;
+			padding: 5px 14px 17px;
+		}
+
+		.ved {
+			margin: 0 auto 0;
+			display: none;
+			border-radius: 3px;
+			width: 80%;
+			height: 80%;
+			object-fit: cover;
+			border: 0;
+			outline: none;
+			position: relative;
+			box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+			z-index: 9999;
+		}
+
+		.shadow {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+			display: none;
+			z-index: 9998;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <img src="{{ url_for('video_feed') }}"> -->
+	<!-- <img src="/Volumes/Apple/电影/1.webm"> -->
+	<div class="box">
+		<div class="header">
+			<h1>视频流媒体传输</h1>
+		</div>
+		<!-- <video id="ved" class="ved" src="/Volumes/Apple/2021张宇考研数学基础30讲课程/启航2021考研数学基础班-高数-张宇03-.mp4" controls -->
+		<!--     autoplay></video> -->
+		<img id="ved" class="ved" src="" alt="">
+		<div class="shadow"></div>
+	</div>
+</body>
+
+</html>

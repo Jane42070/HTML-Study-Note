@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>盒子模型</title>
+	<style type="text/css">
+		.box1 {
+			/* 1 */
+			/* 宽和高 */
+			width: 300px;
+			height: 200px;
+			background-color: gold;
+
+			/* 2 */
+			/* 盒子的边框 */
+			border-top-color: gray;
+			border-top-width: 10px;
+
+			/* 实线：solid 虚线：dashed 点线：dotted */
+			border-top-style: solid;
+
+			border-top: 5px solid gray;
+			border-left: 5px dotted gray;
+			border-right: 5px dashed gray;
+			border-bottom: 5px solid gray;
+			border-radius: 5px;
+
+			font-family: monaco;
+			font-weight: bold;
+			text-indent: 20px;
+
+			border: 7px solid gray;
+
+			/* 3 */
+			/* 设置盒子间距 */
+			padding-top: 20px;
+			padding-left: 40px;
+			padding-right: 80px;
+			padding-bottom: 100px;
+
+			/* 顺时针 */
+			/* 分别设置盒子的 上 右 下 左 的 padding 值 */
+			padding: 20px 80px 100px 40px;
+			/* 左边和右边相等 */
+			padding: 20px 80px 100px;
+			/* 上下 和 左右 */
+			padding: 20px 80px;
+			/* 四个边的 padding 值 */
+			padding: 20px;
+
+			/* 4 */
+			/* 外间距设置（和 padding 一样） */
+			margin-top: 40px;
+			margin: 100px 0 0 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box1">A world war zombie like 1 lazy dog</div>
+	<div class="box2">A world war zombie like 2 lazy dog</div>
+	<div class="box3">A world war zombie like 3 lazy dog</div>
+</body>
+
+</html>

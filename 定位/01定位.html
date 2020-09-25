@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>定位方式</title>
+	<style type="text/css">
+		.clearfix:before,
+		.clearfix:after {
+			content: '';
+			display: table;
+		}
+
+		.clear:after {
+			clear: both;
+		}
+
+		/* IE Browser */
+		.clearfix {
+			zoom: 1;
+		}
+
+		.con {
+			width: 400px;
+			height: 400px;
+			border: 1px solid #000;
+			border: 1px solid black;
+			border-radius: 5px;
+			margin: 50px auto 0;
+			position: relative;
+		}
+
+		.box1,
+		.box2,
+		.box3 {
+			width: 300px;
+			height: 100px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+		.box1 {
+			background-color: green;
+			position: relative;
+			left: 50px;
+			top: 50px;
+		}
+
+		.box2 {
+			background-color: gold;
+			position: absolute;
+			left: 50px;
+			bottom: 100px;
+		}
+
+		.box3 {
+			background-color: purple;
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
+		}
+	</style>
+</head>
+
+<body bgcolor="gray">
+	<div class="con">
+		<div class="box1">relative：相对定位</div>
+		<div class="box2">absolute：绝对定位</div>
+		<div class="box3">fixed：相对浏览器窗口定位</div>
+	</div>
+</body>
+
+</html>

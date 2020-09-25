@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>走路动画</title>
+	<style type="text/css" media="screen">
+		@keyframes walking {
+			from {
+				left: 0px;
+			}
+
+			to {
+				left: -960px;
+			}
+		}
+
+		.box {
+			width: 125px;
+			height: 180px;
+			border: 1px solid #ddd;
+			margin: 50px auto 0;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.box img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			animation: walking 1s steps(8) infinite;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<img src="images/walking.png" alt="走路">
+	</div>
+</body>
+
+</html>

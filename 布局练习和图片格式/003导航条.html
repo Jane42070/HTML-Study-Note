@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>导航条</title>
+	<style type="text/css">
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			float: left;
+			font-family: 'Microsoft YaHei';
+			font-size: 14px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.menu1 {
+			width: 960px;
+			height: 42px;
+			border: 1px solid #000;
+			margin: 50px auto 0;
+		}
+
+		.menu1 ul {
+			margin: 12px 18px;
+		}
+
+		.menu1 ul li .content {
+			width: 100px;
+			color: #333;
+			border-left: 1px solid #000;
+			border-right: 1px solid #000;
+			padding: 0px 20px;
+			margin-left: -1px;
+		}
+
+		.end {
+			width: 100px;
+			color: #333;
+		}
+
+		.menu2 {
+			width: 960px;
+			height: 40px;
+			background-color: #55a8ea;
+			margin: 50px auto 0;
+		}
+
+		.menu2 ul li a {
+			width: 100px;
+			font-family: 'Microsoft YaHei';
+			font-size: 14px;
+			line-height: 40px;
+			color: #fff;
+			position: relative;
+		}
+
+		.menu2 ul li a:hover {
+			background-color: #00619f;
+		}
+
+		.new {
+			height: 15px;
+			line-height: 15px;
+			font-size: 10px;
+			background-color: orange;
+			border-radius: 3px;
+			padding: 0 3px;
+			position: absolute;
+			top: -10px;
+			left: 37px;
+			z-index: 99;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="menu1">
+		<ul>
+			<li><a class="end" href="#">首页</a></li>
+			<li><a class="content" href="#">网站建设</a></li>
+			<li><a class="content" href="#">程序开发</a></li>
+			<li><a class="content" href="#">网络营销</a></li>
+			<li><a class="content" href="#">企业VI</a></li>
+			<li><a class="content" href="#">案例展示</a></li>
+			<li><a class="end" href="#">联系我们</a></li>
+		</ul>
+	</div>
+	<div class="menu2">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">网站建设</a></li>
+			<li><a href="#">程序开发</a></li>
+			<li><a href="#">网络营销</a></li>
+			<li><a href="#">企业VI<div class="new">new</div></a></li>
+			<li><a href="#">案例展示</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>margin-top 塌陷</title>
+		<style type="text/css">
+			.clearfix::before {
+				content: '';
+				display: table;
+			}
+
+			.con {
+				width: 500px;
+				height: 500px;
+				background-color: gold;
+
+				/* border: 1px solid #000; 第一种解决塌陷的方法 */
+
+				/* overflow: hidden; 第二种解决塌陷的方法*/
+
+				border: 1px solid gray;
+				border-radius: 5px;
+			}
+
+			.box {
+				width: 400px;
+				height: 200px;
+				background-color: gray;
+
+				margin: 150px auto;
+
+				font-family: Monaco;
+				font-size: 16px;
+
+				text-indent: 10px;
+
+				border: 1px solid green;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="con clearfix">
+			<div class="box">
+				<div>The brown fox walking around a lazy dog</div>
+				<div>The brown fox walking around a lazy dog</div>
+				<div>The brown fox walking around a lazy dog</div>
+				<div>The brown fox walking around a lazy dog</div>
+			</div>
+		</div>
+	</body>
+
+</html>

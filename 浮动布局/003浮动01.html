@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>浮动 01</title>
+	<style type="text/css">
+		.clearfix::before,
+		.clearfix::after {
+			content: '';
+			display: table;
+		}
+
+		.clear::after {
+			clear: both;
+		}
+
+		/* IE Browser */
+		.clearfix {
+			zoom: 1;
+		}
+
+		.con {
+			width: 500px;
+			height: 105px;
+			font-size: 16px;
+			color: black;
+			border: 1px solid #000;
+			border-radius: 5px;
+			margin: 50px auto 0;
+			padding: 10px;
+		}
+
+		.box1 {
+			width: 200px;
+			height: 100px;
+			font-size: 16px;
+			color: black;
+			background-color: gold;
+			float: left;
+			overflow: hidden;
+			border: 1px solid #000;
+			border-radius: 5px;
+		}
+
+		.box2 {
+			width: 200px;
+			height: 100px;
+			background-color: pink;
+			float: right;
+			border: 1px solid #000;
+			border-radius: 5px;
+		}
+
+		.box1 ul {
+			list-style: none;
+			padding: 10px;
+			margin: 0;
+		}
+
+		.box2 ul {
+			list-style: none;
+			padding: 10px;
+			margin: 0;
+		}
+
+		.con2 {
+			width: 400px;
+			height: 400px;
+			border: 1px solid #000;
+			border-radius: 5px;
+			margin: 50px auto 0;
+			font-size: medium;
+			font-family: monaco;
+		}
+
+		.con2 div {
+			width: 80px;
+			height: 80px;
+			background-color: gold;
+			margin: 15px;
+			border: 1px solid #000;
+			border-radius: 5px;
+			float: left;
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>浮动</h1>
+	<div class="con clearfix">
+		<div class="box1">
+			<ul>
+				<li>浮动特性</li>
+				<li>浮动元素有左浮动(float: left) 和右浮动(float: right)</li>
+				<li>浮动的元素会向左或右浮动，碰到父元素边界、其他元素才停下来</li>
+				<li>响铃浮动的块元素可以并在一行，超出父级宽度就换行</li>
+				<li>浮动让行内元素或块元素自动转化为行内块元素（此时不会有行内块元素间隙问题）</li>
+				<li>浮动元素后面没有浮动的元素会占据浮动元素的位置，没有浮动的元素内的文字会避开浮动的元素，形成文字绕图的效果</li>
+				<li>父元素如果没有设置尺寸（一般是高度不设置），父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动</li>
+				<li>浮动元素之间没有垂直 margin 的合并</li>
+			</ul>
+		</div>
+		<div class="box2">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div class="con2">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+	</div>
+</body>
+
+</html>

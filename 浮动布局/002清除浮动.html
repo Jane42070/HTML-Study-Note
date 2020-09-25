@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+		.list {
+			width: 210px;
+			border: 1px solid #000;
+			margin: 50px auto 0;
+			list-style: none;
+			padding: 0px;
+			/*
+			第一种清除浮动方法
+			overflow: hidden; */
+		}
+
+		.list li {
+			width: 48px;
+			height: 50px;
+			background-color: gold;
+			margin: 10px;
+			font-size: 10px;
+			font-family: 'Microsoft YaHei';
+			border: 1px solid #000;
+			border-radius: 5px;
+			float: left;
+			overflow: hidden;
+		}
+
+		/* 第三种 */
+		.clearfix::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="list clearfix">
+		<li>浮动的元素撑不开外层的list框</li>
+		<li>父级上增加属性 overflow: hidden</li>
+		<li>在最后一个子元素的后面加一个空的 div，给他样式属性 clear: both
+			（不推荐）</li>
+		<li>使用成熟的清除浮动样式类，clearfix</li>
+		<li>test5</li>
+		<li>test6</li>
+		<li>test7</li>
+		<li>test8</li>
+		<!--
+		第二种方法：<div style="clear: both;"></div>
+		-->
+	</ul>
+</body>
+
+</html>

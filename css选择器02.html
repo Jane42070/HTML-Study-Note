@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>css 选择器 02</title>
+	<style type="text/css">
+		.box1 {
+			font-size: 30px;
+			line-height: 30px;
+			text-indent: 40px;
+			color: gold;
+			font-family: 'Monaco';
+		}
+
+		/* 层级选择器 */
+		.box1 span {
+			color: red;
+			font-weight: bold;
+		}
+
+		/* 组选择器 */
+		.box2,
+		.box3 {
+			font-size: 25px;
+			font-family: 'Hack Nerd Font';
+			color: cyan;
+			text-indent: 40px;
+		}
+
+		.box2 .span02 {
+			font-size: 40px;
+			color: gray;
+			font-family: 'Courier New', Courier, monospace;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="box1">This is a <span>luluanting</span> walking on a roof with her feet</div>
+	<div class="box2">This is a <span class="span02">luluanting</span> <em>walking</em> on a roof with her feet</div>
+	<div class="box3">This is a <span class="span03">luluanting</span> walking on a roof with her feet</div>
+</body>
+
+</html>

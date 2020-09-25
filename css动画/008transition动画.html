@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>transition动画</title>
+	<style type="text/css" media="screen">
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			border: 3px solid #000;
+			border-radius: 5px;
+
+			/* 多个属性同时做动画，可以合并成下面一句
+			transition: width 1s ease 1s, height 1s ease, background-color 1s ease 2s;
+			*/
+			transition: all 1s ease;
+		}
+
+		.box:hover {
+			width: 600px;
+			height: 500px;
+			background-color: gray;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+div {
+	font-size: 30px;
+	font-family: 'Monaco';
+	/* 红绿蓝 */
+	/* color: rgb(255, 0, 0); */
+	/* color: rgb(0, 255, 0); */
+	/* color: rgb(0, 0, 255); */
+	/* 黑白 */
+	/* color: rgb(0, 0, 0); */
+	/* color: rgb(255, 255, 255); */
+	color: #ffff00;
+}
